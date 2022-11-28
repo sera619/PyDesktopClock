@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/PyDesktopClock/__init__.py
+src/PyDesktopClock/main.py
+src/PyDesktopClock.egg-info/PKG-INFO
+src/PyDesktopClock.egg-info/SOURCES.txt
+src/PyDesktopClock.egg-info/dependency_links.txt
+src/PyDesktopClock.egg-info/top_level.txt
