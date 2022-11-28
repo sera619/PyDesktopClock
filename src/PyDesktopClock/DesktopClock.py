@@ -11,6 +11,7 @@ class DesktopClock():
         self.timeshow = None
         self.dateshow = None
         self.windowLocked = False
+        self.colorShow = None
 
 
     def formatTime(self):
@@ -50,13 +51,17 @@ class DesktopClock():
         configWin.geometry('250x100')
         colorLabel = Label(configWin, text='Font Color:', bg='white')
         colorInput = Entry(configWin, relief=FLAT, highlightthickness=2, highlightbackground='black')
+        colorShow = Frame(configWin,height=20, width=20, bg= colorInput.get(), highlightthickness=2, highlightbackground="black")
+        
         colorInput.insert(END, '#FFFFF1')
         colorLabel.grid(row=0, column=0, padx=10, pady=10)
         colorInput.grid(row=0, column=1)
+        colorShow.grid(row=0, column=2, padx=10, pady=10)
         colorButton = ttk.Button(configWin, text="Apply Color", command= lambda: self.updateWin(color=colorInput.get()))
         lockButton = ttk.Button(configWin, text="Lock/Unlock", command= lambda: self.lockWindow())
         lockButton.grid(row=1, column=0, pady=10)
         colorButton.grid(row=1, column=1, pady=10)
+        self.colorShow = colorShow
 
 
     def lockWindow(self):
@@ -70,10 +75,39 @@ class DesktopClock():
 
     def updateWin(self, color):
         if len(color) == 7:
-            self.timeshow.config(fg=color, highlightbackground=color)
-            self.dateshow.config(fg=color, highlightbackground=color)
+
+            bc = list(color)
+            if bc[6] == 'A':
+                bc[6]= 'B'
+            elif bc[6] == 'B':
+                bc[6] = 'C'
+            elif bc[6] == 'C':
+                bc[6] = "D"
+            elif bc[6] == 'D':
+                bc[6] = 'E'
+            elif bc[6] == 'E':
+                bc[6] = 'F'
+            elif bc[6] == 'F':
+                bc[6] = 'E'
+            try:
+                if int(bc[6])<9:
+                    bc[6] = str(int(bc[6])+1)
+                elif int(bc[6]) == 9:
+                    bc[6] = '0'
+            except:
+                pass
+ 
+            bc = ''.join(bc)
             self.timeshow.update()
+            self.timeshow.config(fg=color, bg=bc)
             self.dateshow.update()
+            self.dateshow.config(fg=color, bg =bc)
+            self.colorShow.update()
+            if self.colorShow != None:
+                self.colorShow.config(bg=color)
+            self.root.wm_attributes("-transparentcolor", bc)
+            self.root.config(bg=bc)            
+            self.root.update()
         else:
             return
 
@@ -85,7 +119,7 @@ class DesktopClock():
         window.title("Desktop Watch")
         timefont = Font(size=80, family="Bahnschrift SemiBold") 
         datefont = Font(size=25, family="Bahnschrift SemiBold")
-        timeshow = Label(window, text=self.formatTime(), font= timefont, bg='white', fg='#FFFFFE')
+        timeshow = Label(window, text=self.formatTime(), font= timefont, bg='white', fg='#FFFFFE',bd=0, highlightthickness=0, borderwidth=0)
         dateshow = Label(window, text=self.dateFormat(), font= datefont, bg='white', fg='#FFFFFE')
         timeshow.pack()
         dateshow.pack()
@@ -120,3 +154,5 @@ class DesktopClock():
 def RunClock():
     clock = DesktopClock()
     clock.run()
+
+RunClock()
