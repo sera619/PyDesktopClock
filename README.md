@@ -28,5 +28,7 @@
 
 ### Keybinds ###
 
-> Press F12 to exit the clock
-> Press F9 to go to configuration where you can lock the window on screen and change the color of the displayed time
+> - Press F12 to exit the clock
+> - Press F9 to go to configuration where you can lock the window on screen and change the color of the displayed time
+>
+> ![Preview Image](img/preview.png)
