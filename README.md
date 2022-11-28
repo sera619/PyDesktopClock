@@ -21,7 +21,7 @@
 >```py
 >from PyDesktopClock import DesktopClock
 >
->DesktopClock.run()
+>DesktopClock.RunClock()
 >```
 >
 > Run the script and a Clock should apper on your display

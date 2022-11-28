@@ -4,7 +4,7 @@ from tkinter import ttk
 import time
 
 
-class DesktopClock:
+class DesktopClock():
     def __init__(self) -> None:
         self.active = False
         self.root = None
@@ -117,3 +117,6 @@ class DesktopClock:
                 self.root.destroy()
                 break
 
+def RunClock():
+    clock = DesktopClock()
+    clock.run()
