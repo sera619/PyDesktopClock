@@ -7,13 +7,13 @@
 > To use this clock just install it with.
 >
 > ```CMD
->   pip install -i https://test.pypi.org/simple/ PyDesktopClock==0.0.1
+>   pip install -i https://test.pypi.org/simple/ PyDesktopClock
 >```
 >
 > or
 >
 > ```CMD
->   pip3 install -i https://test.pypi.org/simple/ PyDesktopClock==0.0.1
+>   pip3 install -i https://test.pypi.org/simple/ PyDesktopClock
 >```
 >
 > After u finished intalling you can import the clock in a python file
