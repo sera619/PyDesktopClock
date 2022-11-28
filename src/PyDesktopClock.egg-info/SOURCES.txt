@@ -8,3 +8,4 @@ src/PyDesktopClock.egg-info/PKG-INFO
 src/PyDesktopClock.egg-info/SOURCES.txt
 src/PyDesktopClock.egg-info/dependency_links.txt
 src/PyDesktopClock.egg-info/top_level.txt
+test/test.py
