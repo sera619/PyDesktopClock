@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: PyDesktopClock
-Version: 0.0.3
+Version: 0.0.4
 Summary: A Windows desktop widget to display time.
 Home-page: https://github.com/sera619/PyDesktopClock
 Author: S3R43o3
@@ -22,13 +22,13 @@ License-File: LICENSE
 > To use this clock just install it with.
 >
 > ```CMD
->   pip install -i https://test.pypi.org/simple/ PyDesktopClock==0.0.1
+>   pip install -i https://test.pypi.org/simple/ PyDesktopClock
 >```
 >
 > or
 >
 > ```CMD
->   pip3 install -i https://test.pypi.org/simple/ PyDesktopClock==0.0.1
+>   pip3 install -i https://test.pypi.org/simple/ PyDesktopClock
 >```
 >
 > After u finished intalling you can import the clock in a python file
@@ -40,3 +40,8 @@ License-File: LICENSE
 >```
 >
 > Run the script and a Clock should apper on your display
+
+### Keybinds ###
+
+> Press F12 to exit the clock
+> Press F9 to go to configuration where you can lock the window on screen and change the color of the displayed time
