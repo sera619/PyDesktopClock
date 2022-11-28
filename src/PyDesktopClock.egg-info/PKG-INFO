@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: PyDesktopClock
-Version: 0.0.4
+Version: 0.0.5
 Summary: A Windows desktop widget to display time.
 Home-page: https://github.com/sera619/PyDesktopClock
 Author: S3R43o3
@@ -43,5 +43,7 @@ License-File: LICENSE
 
 ### Keybinds ###
 
-> Press F12 to exit the clock
-> Press F9 to go to configuration where you can lock the window on screen and change the color of the displayed time
+> - Press F12 to exit the clock
+> - Press F9 to go to configuration where you can lock the window on screen and change the color of the displayed time
+>
+> ![Preview Image](img/preview.png)
