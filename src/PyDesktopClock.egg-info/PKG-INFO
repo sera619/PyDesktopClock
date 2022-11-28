@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: PyDesktopClock
-Version: 0.0.2
+Version: 0.0.3
 Summary: A Windows desktop widget to display time.
 Home-page: https://github.com/sera619/PyDesktopClock
 Author: S3R43o3
@@ -36,7 +36,7 @@ License-File: LICENSE
 >```py
 >from PyDesktopClock import DesktopClock
 >
->DesktopClock.run()
+>DesktopClock.RunClock()
 >```
 >
 > Run the script and a Clock should apper on your display

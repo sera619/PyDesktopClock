@@ -1,4 +1,4 @@
-from src.PyDesktopClock import DesktopClock
+from PyDesktopClock import DesktopClock
 
 def main():
     DesktopClock.RunClock()
