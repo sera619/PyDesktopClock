@@ -32,3 +32,10 @@
 > - Press F9 to go to configuration where you can lock the window on screen and change the color of the displayed time
 >
 > ![Preview Image](img/preview.png)
+
+### Changelog ###
+
+> v0.0.6:
+>
+> - fix white border around text if you change the color
+>
